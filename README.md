@@ -12,25 +12,23 @@ tags: Web Development, Mosh, Youtube
 
 #### [Crash Course](https://www.youtube.com/watch?v=W6NZfCO5SIk)
 
-* Earlier, js was limited with browser(console) but now with node.js, it can be run outside the browser(can be used in Google Chrome console too). 
+* Earlier, js was limited with browser(console) but now with node.js, it can be run outside the browser( easily available: you can run in Google Chrome console too). 
 * Can be used for: frontend, backend or for full stack development
 * Used by: netflix and wallmart
 * Used in: mobile apps, real time networking apps, games and cmd tools
 * node.js : is a js engine(called V8) embeded in c++ programme(provide 3rd party support for js)
 * ECMA: is a international script specification followed by js!
-* Use live server extention: To bind Visual studio with browser
-* Script section: can be in body/head section, best(end in body section as no loading issue).
-* To seperate js script file: `<script src= 'index.js'></script>`
-* Using Node to run JS(cmd): open js file from terminal`$node index.js`
-1. let name = 'Mosh'; 
-    * var is nearest function scope
-    * let has nearest block scope
+* Use "live server" extention: To bind Visual studio with browser
+* To seperate js script file from html: `<script src= 'index.js'></script>`
+* Script section: can be put in body/head section, bestpractice(in the end of body section as there will be no loading issue).
+* Using Node to run JS(cmd): To run js file from terminal`$node index.js`
 2. Variable : 
     * dynamic(type can change later in code)
     * camel notation(firstName) & case sensitive
     * don't have float
-    * undefined(declared but not initialised)
+    * undefined(memory allocated but not initialised)
     * "null" is primitive type
+    * "Not defined"(memory not allocated)
     
 ```
 const selectorName = 'fixed';
@@ -48,7 +46,27 @@ greet();
 ```
 
 
-
+#### [NamasteJS](https://www.youtube.com/watch?v=W6NZfCO5SIk)
+* Js is synchronous and single thread language, it work in single direction, at a time only one context(either main/global or some other) from call stack can be run, other have to wait. 
+* Execution Context: 
+    * Memory phase: memory allocated to function and variables
+    * Code Phase: contain thread of execution
+* Hoisting: you can use variable and function before declaration, because of execution context(first memory is created and then code is executed)
+* "this === window/global" object: "window" is provided by browser while "this" is provided by the js engine.
+* Empty js file is the shortest program in js(for js engine still works to work on memory phase)
+* var/let(strict than var)/const(most strict)
+* Keep note of "lexical parent" in case of function & block scope.
+* Reference Error:
+    *  Variable not available in memory
+    * temporal dead zone: time for which "let" variable is hoisted but not initialised
+* Type Error: re-asign the value to const.
+* Syntax Error:
+    *  "const" not initialised at declaration
+    *  re-declaration of "let" variable
+*  We use "block" to put multiple statement in place where language expect of single statement
+    * Shadowing: when value of global variable is masked by local. Illegal-shadowing is not allowed for scope difference 
+* Closure: function + lexical enviroment
+    * when a function is passed or returned , it hold the reference to all the variable needed during running of that function.
 
 
 ## [Detailed](https://www.youtube.com/watch?v=W6NZfCO5SIk)?
